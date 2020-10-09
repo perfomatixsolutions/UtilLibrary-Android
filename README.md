@@ -40,9 +40,11 @@ Step 2. Add the dependency
 	        implementation 'com.github.nithindaskc67:UtilLibrary:Tag'
 	}
 Step 3. Initialize the object for calling the functions
+
         val basicUtil = BasicUtil()
         val dateUtil = DateUtil()
         
        eg: basicUtil.showToastShort(this, dateUtil.dateTimeFormatTo12Hr("15:24").toString())
+      
 
 
