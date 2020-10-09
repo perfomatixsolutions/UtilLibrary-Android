@@ -1,18 +1,48 @@
-# Project Name
-> Here goes your awesome project description!
+#  Util Library 
+> A basic util class for android library
 
-## Table of contents
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Features](#features)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
+## Basic utils
+* show toast in short duration
+* Show toast in long duration
+* check network availablity
+* get the Connection type
+* hide keyboard
+* check email is valid email
 
-## General info
-Add more general information about project. What the purpose of the project is? Motivation?
-## Setup
-Describe how to install / setup your local environement / add link to demo version.
+## Date Util
+* get the time in utc
+* parseDate
+* time to LocalTime
+* getDayOfWeekAbbreviated
+* getMonth
+* getMonthAbbreviated
+* parseDateToDDMMMYYYY
+* parseDateToDDMMMYYYYandTIME
+* parseDateToTime
+* dateTimeFormatTo12Hr
+* dateTimeFormatTo12Hr
+
+
+
+
+## Set up
+Add it in your root build.gradle at the end of repositories:
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+Step 2. Add the dependency
+
+	dependencies {
+	        implementation 'com.github.nithindaskc67:UtilLibrary:Tag'
+	}
+Step 3. Initialize the object for calling the functions
+        val basicUtil = BasicUtil()
+        val dateUtil = DateUtil()
+        
+       eg: basicUtil.showToastShort(this, dateUtil.dateTimeFormatTo12Hr("15:24").toString())
+
 
