@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.helper.*
 import com.helper.utillibrary.BasicUtil
+import com.helper.utillibrary.DateUtil
 
 
 class MainActivity : AppCompatActivity() {
@@ -11,6 +12,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val basicUtil = BasicUtil()
-        basicUtil.showToastShort(this, basicUtil.getDataConnectionType(this).toString())
+        val dateUtil = DateUtil()
+
+        basicUtil.showToastShort(this, dateUtil.dateTimeFormatTo12Hr("15:24").toString())
     }
 }

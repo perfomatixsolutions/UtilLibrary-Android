@@ -205,8 +205,17 @@ public class DateUtil {
     }
 
     fun dateTimeFormatTo12Hr(dateString: String?): String? {
-        val date12Format = SimpleDateFormat("hh:mm a")
-        return date12Format.format(date12Format.parse(dateString))
+        var time = "";
+        try {
+            val sdf = SimpleDateFormat("H:mm")
+            val dateObj = sdf.parse(dateString)
+            System.out.println(dateObj)
+            println(SimpleDateFormat("K:mm a").format(dateObj))
+            time = SimpleDateFormat("K:mm a").format(dateObj);
+        } catch (e: ParseException) {
+            e.printStackTrace()
+        }
+        return time;
     }
 
 }
