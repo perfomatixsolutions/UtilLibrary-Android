@@ -200,10 +200,7 @@ public class DateUtil {
         return fmtOut.format(date)
     }
 
-    fun timeFormatTo12Hr(dateString: String?): String? {
-        return ""
-    }
-
+ 
     fun dateTimeFormatTo12Hr(dateString: String?): String? {
         var time = "";
         try {
