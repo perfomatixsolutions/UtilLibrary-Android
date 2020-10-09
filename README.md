@@ -20,7 +20,6 @@
 * parseDateToDDMMMYYYYandTIME
 * parseDateToTime
 * dateTimeFormatTo12Hr
-* dateTimeFormatTo12Hr
 
 
 
