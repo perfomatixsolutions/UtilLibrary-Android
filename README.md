@@ -25,7 +25,8 @@
 
 
 ## Set up
-Add it in your root build.gradle
+Add it in your root build.gradle at the end of repositories:
+
 	allprojects {
 		repositories {
 			...
@@ -35,8 +36,9 @@ Add it in your root build.gradle
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.nithindaskc67:UtilLibrary:Tag'
+	        implementation 'com.github.perfomatixsolutions:UtilLibrary-Android:Tag'
 	}
+
 Step 3. Initialize the object for calling the functions
 
         val basicUtil = BasicUtil()
