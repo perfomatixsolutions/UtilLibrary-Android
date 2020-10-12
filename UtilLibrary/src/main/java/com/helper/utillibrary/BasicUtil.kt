@@ -2,6 +2,8 @@ package com.helper.utillibrary
 
 import android.app.Activity
 import android.content.Context
+import android.content.pm.PackageInfo
+import android.content.pm.PackageManager
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.view.View
@@ -53,6 +55,7 @@ public class BasicUtil {
             return "No network"
         }
     }
+
     fun hideKeyboard(activity: Activity) {
         val imm =
             activity.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -77,4 +80,21 @@ public class BasicUtil {
         matcher = pattern.matcher(email)
         return matcher?.matches() ?: false
     }
+
+    fun getAppVersion(mContext: Context): String? {
+        var existingVersion: String? = null
+
+        try {
+            val manager: PackageManager = mContext.getPackageManager()
+            val info: PackageInfo
+            info = manager.getPackageInfo(mContext.getPackageName(), PackageManager.GET_ACTIVITIES)
+            existingVersion = info.versionName
+           return existingVersion
+        } catch (e: PackageManager.NameNotFoundException) {
+            e.printStackTrace()
+            return existingVersion
+
+        }
+    }
+
 }
